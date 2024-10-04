@@ -26,7 +26,7 @@ import kotlinx.coroutines.flow.StateFlow
 /*
  * View model of Dessert Release components
  */
-class DessertReleaseViewModel() : ViewModel() {
+class DessertReleaseViewModel : ViewModel() {
 
     private val _uiState = MutableStateFlow(DessertReleaseUiState())
 
@@ -58,5 +58,5 @@ data class DessertReleaseUiState(
     val toggleContentDescription: Int =
         if (isLinearLayout) R.string.grid_layout_toggle else R.string.linear_layout_toggle,
     val toggleIcon: Int =
-        if (isLinearLayout) R.drawable.ic_grid_layout else R.drawable.ic_linear_layout
+        if (isLinearLayout) R.drawable.ic_grid_layout else R.drawable.ic_linear_layout,
 )

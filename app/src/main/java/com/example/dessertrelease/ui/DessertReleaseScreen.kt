@@ -60,7 +60,7 @@ import com.example.dessertrelease.ui.theme.DessertReleaseTheme
 fun DessertReleaseApp(
     dessertReleaseViewModel: DessertReleaseViewModel = viewModel(
         factory = DessertReleaseViewModel.Factory
-    )
+    ),
 ) {
     DessertReleaseScreen(
         uiState = dessertReleaseViewModel.uiState.collectAsState().value,
@@ -72,7 +72,7 @@ fun DessertReleaseApp(
 @Composable
 private fun DessertReleaseScreen(
     uiState: DessertReleaseUiState,
-    selectLayout: (Boolean) -> Unit
+    selectLayout: (Boolean) -> Unit,
 ) {
     val isLinearLayout = uiState.isLinearLayout
     Scaffold(
@@ -121,7 +121,7 @@ private fun DessertReleaseScreen(
 @Composable
 fun DessertReleaseLinearLayout(
     modifier: Modifier = Modifier,
-    contentPadding: PaddingValues = PaddingValues(0.dp)
+    contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
     LazyColumn(
         modifier = modifier,
@@ -153,8 +153,8 @@ fun DessertReleaseLinearLayout(
 @Composable
 fun DessertReleaseGridLayout(
     modifier: Modifier = Modifier,
-    contentPadding: PaddingValues = PaddingValues(0.dp)
-    ) {
+    contentPadding: PaddingValues = PaddingValues(0.dp),
+) {
     LazyVerticalGrid(
         modifier = modifier,
         columns = GridCells.Fixed(3),
